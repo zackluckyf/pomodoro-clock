@@ -1,0 +1,244 @@
+/* ---------------------------------------- */
+/* BASIC SETUP */
+/* ---------------------------------------- */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body{
+    background-color: rgb(34, 34, 34);
+    color: rgba(188, 198, 204, 1.0);
+    font-family: 'Lato', 'Arial', sans-serif;
+    font-weight: 300;
+    font-size: 20px;
+    text-rendering: optimizeLegibility;
+    overflow-x: hidden;
+}
+
+/* ---------------------------------------- */
+/* HEADINGS/STYLINGS */
+/* ---------------------------------------- */
+
+h1{
+    text-align: center;
+    font-size: 350%;
+    margin-bottom: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    font-weight: 300;
+}
+
+.row {
+    margin: 0 auto;
+}
+
+/* ---------------------------------------- */
+/* BUTTON STYLING */
+/* ---------------------------------------- */
+
+button {
+    background-color: #575e62; 
+    color: white;
+    padding: 10px 12px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 20px;
+    margin-left: 5px;
+    margin-top: 5px;
+    -webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s;
+    height: 70px;
+    width: 70px;
+    text-align: center;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #BCC6CC; 
+    color: white;
+    cursor:pointer;
+}
+
+button:focus {outline:0;}
+
+/* ---------------------------------------- */
+/* CLOCKS */
+/* ---------------------------------------- */
+
+.clocks{
+    width: 50%;
+    float: left;
+}
+
+.clock-titles{
+    display: inline-block;
+    font-size: 150%;
+}
+
+.break-time-clock {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 150%;
+    -webkit-transition-duration: .4s;
+    transition-duration: .4s;
+    display: inline-block;
+    float: left;
+    color: rgba(188, 198, 204, 1.0);
+}
+
+.break-time-clock:hover {
+    color: rgb(196, 0, 0);
+    cursor:pointer;
+}
+
+.session-time-clock {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 150%;
+    -webkit-transition-duration: .4s;
+    transition-duration: .4s;
+    position: absolute;
+    left: 280px;
+    top: 145px;
+    color: rgba(188, 198, 204, 1.0);
+}
+
+.session-time-clock:hover {
+    color: rgb(76, 175, 80); 
+    cursor:pointer;
+}
+
+.clock-displays {
+    margin-top: 5px;
+    margin-left: 100px;
+}
+
+.break-time-title {
+    margin-left: 80px;
+    margin-right: 20px;
+    border-bottom: 1px solid #BCC6CC; 
+}
+
+.session-time-title {
+    border-bottom: 1px solid #BCC6CC; 
+}
+
+/* ---------------------------------------- */
+/* START/PAUSE/RESET BUTTONS */
+/* ---------------------------------------- */
+
+.operation-buttons{
+    width: 50%;
+    float: left;
+    height: 70px;
+}
+
+.start-button{
+    margin-top: 15px;
+    margin-left: 110px;
+    height: 60px;
+    width: 80px;
+}
+
+.pause-button{
+    margin-left: 15px;
+    height: 60px;
+    width: 80px;
+}
+
+.reset-button{
+    margin-left: 15px;
+    height: 60px;
+    width: 80px;
+}
+
+/* ---------------------------------------- */
+/* NUMPAD */
+/* ---------------------------------------- */
+
+.numpad-buttons {
+    height: 400px;
+    width: 50%;
+    float: left;
+}
+
+.num-button {
+    background-color: #575e62;
+}
+
+.button1{
+    margin-top: 30px;
+    margin-left: 130px;
+    margin-bottom: 3px;
+}
+
+.button4{
+    margin-left: 130px;
+    margin-bottom: 3px;
+}
+
+.button7{
+    margin-left: 130px;
+    margin-bottom: 3px;
+}
+
+.button0 {
+    margin-left: 210px;
+}
+
+
+/* ---------------------------------------- */
+/* CIRCLE CLOCK */
+/* ---------------------------------------- */
+
+.percent-remaining{
+    height: 500px;
+    width: 50%;
+    display: inline-block;
+    float: right;
+}
+
+.percent-display{
+    font-size: 40px;
+    color: black;
+    margin-left: 125px;
+    line-height: 350px;
+
+}  
+
+.circle-clock-background {
+    background-color: #BCC6CC; 
+    border: 2px solid rgba(76, 175, 80, 1.0);
+    height: 350px;
+    width: 350px;
+    border-radius: 50%;
+    margin-left: 50px;
+    margin-top: 80px;
+}
+
+.circle-clock{
+    background-color: rgba(76, 175, 80, 1.0); 
+    height: 342px;
+    width: 342px;
+    margin-left: 2px;
+    margin-top: 2px;
+    border-radius: 50%;
+    position: absolute;
+}
+
+/* ---------------------------------------- */
+/* CREATED BY */
+/* ---------------------------------------- */
+
+
+.created-by{
+    width: 50%;
+    display: inline-block;
+    float: right;
+    text-align: center;
+}
+
+

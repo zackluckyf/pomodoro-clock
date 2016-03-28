@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link rel="stylesheet" type="text/css" href="resources/styles.css">
+        <link href='https://fonts.googleapis.com/css?family=Lato:400,300,100,300italic' rel='stylesheet' type='text/css'>
+        <link href='https://fonts.googleapis.com/css?family=Orbitron' rel='stylesheet' type='text/css'>
+    </head>
+    
+    <body>
+        <h1>Pomodoro Clock</h1>
+        <div class="clocks">
+            <div class="clock-titles">
+                <span class="break-time-title">Break Time</span>
+                <span class="session-time-title">Session Time</span>
+            </div>
+            <div class="clock-displays">
+                <div class="break-time-clock">00:00</div>
+                <div class="session-time-clock">00:00</div>
+            </div>
+        </div>
+        <div class="percent-remaining">
+            <div class="circle-clock-background">
+                <div class="circle-clock">
+                    <span class="percent-display">100%</span>
+                </div>
+            </div>
+        </div>
+        <div class="operation-buttons row">
+            <button class="start-button">Start</button>
+            <button class="pause-button">Pause</button>
+            <button class="reset-button">Reset</button>
+        </div>
+        <div class="numpad-buttons">
+            <div class="row">
+                <button class="button1 num-button">1</button>
+                <button class="button2 num-button">2</button>
+                <button class="button3 num-button">3</button>
+            </div>
+            <div class="row">
+                <button class="button4 num-button">4</button>
+                <button class="button5 num-button">5</button>
+                <button class="button6 num-button">6</button>
+            </div>
+            <div class="row">
+                <button class="button7 num-button">7</button>
+                <button class="button8 num-button">8</button>
+                <button class="button9 num-button">9</button>
+            </div>
+            <div class="row">
+                <button class="button0 num-button">0</button>
+            </div>
+        </div>
+        <div class="created-by">
+            <span class="author">Created By: Zachary Fanning</span>
+        </div>
+        
+        
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+        <script src="resources/clock.js"></script>
+    </body>
+</html>
