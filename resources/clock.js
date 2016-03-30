@@ -1,3 +1,9 @@
+/* 
+
+setup responsive web design
+
+*/
+
 $(document).ready(function(){
     
     var sessionTimeClock = false;
@@ -79,6 +85,17 @@ $(document).ready(function(){
                     counter--;
                     $(".session-time-clock").text(display);
                 }
+            $("button").click(function(){
+                        var input = $(this).text();
+                        if(input === "Reset")
+                        {
+                            display = "00:00";
+                            $(".session-time-clock").text(display);
+                            $(".break-time-clock").text(display);
+                            breakTimer = "00:00";
+                            sessionTimer = "00:00";
+                        }
+                    });
         }); 
     
     $("button").click(function(){
@@ -108,17 +125,29 @@ $(document).ready(function(){
                     counter--;
                     $(".break-time-clock").text(display);
                 }
+            $("button").click(function(){
+                        var input = $(this).text();
+                        if(input === "Reset")
+                        {
+                            display = "00:00";
+                            $(".session-time-clock").text(display);
+                            $(".break-time-clock").text(display);
+                            breakTimer = "00:00";
+                            sessionTimer = "00:00";
+                        }
+                    });
         }); 
     
     // start pause reset buttons
     
     $("button").click(function(){
        
-        var input = $(this).text();
+        var input = $(this).text(); 
         if(input === "Start" && $(".session-time-clock").text() !== "00:00" && $(".break-time-clock").text() !== "00:00")
             {
                 $(".session-time-clock").css("pointer-events", "none");
                 $(".break-time-clock").css("pointer-events", "none");
+                $(".start-button").css("pointer-events", "none");
                 var sessionTimer = $(".session-time-clock").text();
                 var breakTimer = $(".break-time-clock").text();
                 var breakSeconds = parseInt(breakTimer.slice(0,2),10)*60 + parseInt(breakTimer.slice(3,5),10);
@@ -148,16 +177,12 @@ $(document).ready(function(){
                     var time = minutes + ":" + seconds;
                     count1++;
                     var greenClockSize = Math.floor(sessionSeconds/(sessionSeconds+count1)*100);
-                    var greenTransition = greenClockSize/100;
-                    $(".circle-clock").css('background-color','rgba(76, 175, 80, ' + greenTransition + ')');
-                    if(greenClockSize < 100 && greenClockSize > 9)
-                        {
-                            $(".percent-display").css("margin-left", "135px");
-                        }
-                    if(greenClockSize < 9)
-                        {
-                            $(".percent-display").css("margin-left", "145px");
-                        }
+                    var greenTransition = greenClockSize/100*334;
+                    $(".circle-clock").css('height', greenTransition);
+                    $(".circle-clock").css('width', greenTransition);
+                    var marginChange = 5 + 334/2 - greenTransition/2;
+                    $(".circle-clock").css('margin-left', marginChange);
+                    $(".circle-clock").css('margin-top', marginChange);
                     $(".percent-display").text(greenClockSize + "%");
                     $(".session-time-clock").text(time);
                     if(minutes === "00" && seconds === "00")
@@ -183,6 +208,14 @@ $(document).ready(function(){
                             {
                                 $(".session-time-clock").text(time);
                                 beep();
+                                $(".circle-clock").css("background-color", "rgba(196, 0, 0, 1.0)");
+                                $(".circle-clock-background").css("border-color", "rgba(196, 0, 0, 1.0)");
+                                $(".circle-clock").css('height', "334px");
+                                $(".circle-clock").css('width', "334px");
+                                $(".circle-clock").css('margin-left', "5px");
+                                $(".circle-clock").css('margin-top', "5px");
+                                $("percent-remaining-title").css("margin-left", "8%");
+                                $("percent-remaining-title").text("Percent of Break Remaining");
                                 $(".session-time-clock").css("color", "rgba(188, 198, 204, 1.0)")
                                 myVar2 = setInterval(myTimer2, 1000);
                                 sessionSeconds = count1;
@@ -192,11 +225,6 @@ $(document).ready(function(){
                         }
                     $("button").click(function(){
                         var input = $(this).text();
-                        if(input === "Pause")
-                        {
-                            clearInterval(myVar);
-                            clearInterval(myVar2);
-                        }
                         if(input === "Reset")
                         {
                             clearInterval(myVar);
@@ -207,12 +235,19 @@ $(document).ready(function(){
                             breakTimer = "00:00";
                             sessionTimer = "00:00";
                             $(".percent-display").text("100%");
+                            $(".session-time-clock").css("color", "rgba(188, 198, 204, 1.0)");
+                            $(".break-time-clock").css("color", "rgba(188, 198, 204, 1.0)");
                             $(".circle-clock").css('background-color','rgba(76, 175, 80, 1.0)');
-                            $(".session-time-clock").css("color", "rgba(188, 198, 204, 1.0)")
-                            $(".break-time-clock").css("color", "rgba(188, 198, 204, 1.0)")
+                            $(".circle-clock-background").css("border-color", "rgba(76, 175, 80, 1.0)");
+                            $(".circle-clock").css('height', "334px");
+                            $(".circle-clock").css('width', "334px");
+                            $(".circle-clock").css('margin-left', "5px");
+                            $(".circle-clock").css('margin-top', "5px");
                             $(".session-time-clock").css("pointer-events", "auto");
                             $(".break-time-clock").css("pointer-events", "auto");
-                            $(".percent-display").css("margin-left", "125px");
+                            $(".start-button").css("pointer-events", "auto");
+                            $("percent-remaining-title").css("margin-left", "5%");
+                            $("percent-remaining-title").text("Percent of Session Remaining");
                         }
                     });
                 }
@@ -237,8 +272,12 @@ $(document).ready(function(){
                     var time = minutes + ":" + seconds;
                     count2++;
                     var redClockSize = Math.floor(breakSeconds/(breakSeconds+count2)*100);
-                    var redTransition = redClockSize/100;
-                    $(".circle-clock").css('background-color','rgba(196, 0, 0, ' + redTransition + ')');
+                    var redTransition = redClockSize/100*334;
+                    $(".circle-clock").css('height', redTransition);
+                    $(".circle-clock").css('width', redTransition);
+                    var marginChange = 5 + 334/2 - redTransition/2;
+                    $(".circle-clock").css('margin-left', marginChange);
+                    $(".circle-clock").css('margin-top', marginChange);
                     $(".percent-display").text(redClockSize + "%");
                     $(".break-time-clock").text(time);
                     if(minutes === "00" && seconds === "00")
@@ -264,6 +303,14 @@ $(document).ready(function(){
                             {
                                 $(".break-time-clock").text(time);
                                 beep();
+                                $(".circle-clock").css("background-color", 'rgba(76, 175, 80, 1.0)');
+                                $(".circle-clock-background").css("border-color", "rgba(76, 175, 80, 1.0)");
+                                $(".circle-clock").css('height', "334px");
+                                $(".circle-clock").css('width', "334px");
+                                $(".circle-clock").css('margin-left', "5px");
+                                $(".circle-clock").css('margin-top', "5px");
+                                $("percent-remaining-title").css("margin-left", "5%");
+                                $("percent-remaining-title").text("Percent of Session Remaining");
                                 $(".break-time-clock").css("color", "rgba(188, 198, 204, 1.0)")
                                 myVar = setInterval(myTimer, 1000);
                                 breakSeconds = count2;
@@ -274,11 +321,6 @@ $(document).ready(function(){
                         }
                     $("button").click(function(){
                         var input = $(this).text();
-                        if(input === "Pause")
-                        {
-                            clearInterval(myVar);
-                            clearInterval(myVar2);
-                        }
                         if(input === "Reset")
                         {
                             clearInterval(myVar);
@@ -289,12 +331,19 @@ $(document).ready(function(){
                             breakTimer = "00:00";
                             sessionTimer = "00:00";
                             $(".percent-display").text("100%");
-                            $(".circle-clock").css('background-color','rgba(76, 175, 80, 1.0)');
                             $(".session-time-clock").css("color", "rgba(188, 198, 204, 1.0)");
                             $(".break-time-clock").css("color", "rgba(188, 198, 204, 1.0)");
+                            $(".circle-clock").css('background-color','rgba(76, 175, 80, 1.0)');
+                            $(".circle-clock-background").css("border-color", "rgba(76, 175, 80, 1.0)");
+                            $(".circle-clock").css('height', "334px");
+                            $(".circle-clock").css('width', "334px");
+                            $(".circle-clock").css('margin-left', "5px");
+                            $(".circle-clock").css('margin-top', "5px");
                             $(".session-time-clock").css("pointer-events", "auto");
                             $(".break-time-clock").css("pointer-events", "auto");
-                            $(".percent-display").css("margin-left", "125px");
+                            $(".start-button").css("pointer-events", "auto");
+                            $("percent-remaining-title").css("margin-left", "5%");
+                            $("percent-remaining-title").text("Percent of Session Remaining");
                         }
                     });
                 }

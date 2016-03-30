@@ -78,6 +78,7 @@ button:focus {outline:0;}
 .clock-titles{
     display: inline-block;
     font-size: 150%;
+    margin-left: 50px;
 }
 
 .break-time-clock {
@@ -86,7 +87,9 @@ button:focus {outline:0;}
     -webkit-transition-duration: .4s;
     transition-duration: .4s;
     display: inline-block;
-    float: left;
+    margin-top: 5px;
+    margin-left: 150px;
+    margin-right: 70px;
     color: rgba(188, 198, 204, 1.0);
 }
 
@@ -100,20 +103,14 @@ button:focus {outline:0;}
     font-size: 150%;
     -webkit-transition-duration: .4s;
     transition-duration: .4s;
-    position: absolute;
-    left: 280px;
-    top: 145px;
+    display: inline-block;
+    margin-top: 5px;
     color: rgba(188, 198, 204, 1.0);
 }
 
 .session-time-clock:hover {
     color: rgb(76, 175, 80); 
     cursor:pointer;
-}
-
-.clock-displays {
-    margin-top: 5px;
-    margin-left: 100px;
 }
 
 .break-time-title {
@@ -138,13 +135,7 @@ button:focus {outline:0;}
 
 .start-button{
     margin-top: 15px;
-    margin-left: 110px;
-    height: 60px;
-    width: 80px;
-}
-
-.pause-button{
-    margin-left: 15px;
+    margin-left: 200px;
     height: 60px;
     width: 80px;
 }
@@ -171,22 +162,22 @@ button:focus {outline:0;}
 
 .button1{
     margin-top: 30px;
-    margin-left: 130px;
+    margin-left: 175px;
     margin-bottom: 3px;
 }
 
 .button4{
-    margin-left: 130px;
+    margin-left: 175px;
     margin-bottom: 3px;
 }
 
 .button7{
-    margin-left: 130px;
+    margin-left: 175px;
     margin-bottom: 3px;
 }
 
 .button0 {
-    margin-left: 210px;
+    margin-left: 255px;
 }
 
 
@@ -201,32 +192,35 @@ button:focus {outline:0;}
     float: right;
 }
 
-.percent-display{
-    font-size: 40px;
-    color: black;
-    margin-left: 125px;
-    line-height: 350px;
+.percent-remaining-title {
+    border-bottom: 1px solid #BCC6CC; 
+    font-size: 150%;
+    margin-left: 5%;
+    margin-top: 5%;
+}
 
+.percent-display{
+    font-size: 200%;
+    margin-left: 30%;
 }  
 
 .circle-clock-background {
     background-color: #BCC6CC; 
-    border: 2px solid rgba(76, 175, 80, 1.0);
+    border: 3px solid rgba(76, 175, 80, 1.0);
     height: 350px;
     width: 350px;
     border-radius: 50%;
-    margin-left: 50px;
-    margin-top: 80px;
+    margin-left: 40px;
+    margin-top: 15px;
 }
 
 .circle-clock{
     background-color: rgba(76, 175, 80, 1.0); 
-    height: 342px;
-    width: 342px;
-    margin-left: 2px;
-    margin-top: 2px;
+    height: 334px;
+    width: 334px;
+    margin-left: 5px;
+    margin-top: 5px;
     border-radius: 50%;
-    position: absolute;
 }
 
 /* ---------------------------------------- */

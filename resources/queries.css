@@ -1,0 +1,388 @@
+/* Big tablet to 1200px */
+@media only screen and (max-width: 1200px){
+    /* setup in this view */
+}
+
+/* Small tablets/big tablets: from 768px to 1023px */
+@media only screen and (max-width: 1023px){
+    body{
+    font-size: 18px;
+    }
+    .break-time-title {
+    margin-left: 0px;
+    }
+    .break-time-clock {
+    margin-left: 20px;
+    margin-right: 65px;
+    }
+    .clock-displays {
+    margin-top: 5px;
+    margin-left: 50px;
+    }
+    .start-button{
+    margin-left: 105px;
+    }
+    .button1{
+        margin-left: 85px;
+    }
+
+    .button4{
+        margin-left: 85px;
+    }
+
+    .button7{
+        margin-left: 85px;
+    }
+
+    .button0 {
+    margin-left: 165px;
+    }
+    .circle-clock-background {
+    margin-left: 20px;
+    }
+}
+
+/* Large phones/small tablets: from 680px to 768px */
+@media only screen and (max-width: 768px){
+    body{
+    font-size: 18px;
+    }
+    .break-time-title {
+    margin-left: 170px; 
+    }
+    .break-time-clock {
+    margin-left: 185px;
+    margin-right: 70px;
+    }
+    .percent-remaining{
+    width: 100%;
+    height: 450px;
+    }
+    .clocks{
+    width: 100%;
+    }
+    .operation-buttons{
+    width: 100%;
+    height: 70px;
+    }
+    .numpad-buttons {
+    width: 100%;
+    height: 350px;
+    }
+    .percent-remaining-title {
+    margin-left: 200px;
+    margin-top: 15px;
+    }
+    .percent-display{
+        font-size: 200%;
+        margin-left: 310px;
+    } 
+    .circle-clock-background {
+        margin-left: 180px;
+        margin-top: 15px;
+    }
+    .start-button{
+    margin-left: 265px;
+    }
+    .button1{
+        margin-left: 240px;
+    }
+
+    .button4{
+        margin-left: 240px;
+    }
+
+    .button7{
+        margin-left: 240px;
+    }
+
+    .button0 {
+    margin-left: 320px;
+    }
+}
+
+/* medium phones: from 600 to 680px */
+@media only screen and (max-width: 680px){
+    body{
+    font-size: 16px;
+    }
+    .break-time-title {
+    margin-left: 140px; 
+    }
+    .break-time-clock {
+    margin-left: 155px;
+    margin-right: 60px;
+    }
+    .clocks{
+    width: 100%;
+    }
+    .operation-buttons{
+    width: 100%;
+    height: 70px;
+    }
+    .numpad-buttons {
+    width: 100%;
+    }
+    .percent-remaining-title {
+    margin-left: 170px;
+    margin-top: 15px;
+    }
+    .percent-display{
+    font-size: 200%;
+    margin-left: 280px;;
+    }  
+    .circle-clock-background {
+    margin-left: 140px;
+    margin-top: 15px;
+    }
+    .start-button{
+    margin-left: 225px;
+    }
+    .button1{
+        margin-left: 205px;
+    }
+
+    .button4{
+        margin-left: 205px;
+    }
+
+    .button7{
+        margin-left: 205px;
+    }
+
+    .button0 {
+    margin-left: 285px;
+    }
+}
+    
+/* medium phones: from 550 to 600px */
+@media only screen and (max-width: 600px){
+    body{
+    font-size: 16px;
+    }
+    .break-time-title {
+    margin-left: 100px; 
+    }
+    .break-time-clock {
+    margin-left: 115px;
+    margin-right: 60px;
+    }
+    .clocks{
+    width: 100%;
+    }
+    .operation-buttons{
+    width: 100%;
+    height: 70px;
+    }
+    .numpad-buttons {
+    width: 100%;
+    }
+    .percent-remaining-title {
+    margin-left: 140px;
+    margin-top: 15px;
+    }
+    .percent-display{
+    font-size: 200%;
+    margin-left: 250px;;
+    }  
+    .circle-clock-background {
+    margin-left: 120px;
+    margin-top: 15px;
+    }
+    .start-button{
+    margin-left: 205px;
+    }
+    .button1{
+        margin-left: 180px;
+    }
+
+    .button4{
+        margin-left: 180px;
+    }
+
+    .button7{
+        margin-left: 180px;
+    }
+
+    .button0 {
+    margin-left: 260px;
+    }
+}
+/* Small phones: from 480 to 550px */
+@media only screen and (max-width: 550px){
+    body{
+    font-size: 14px;
+    }
+    .break-time-title {
+    margin-left: 80px; 
+    }
+    .break-time-clock {
+    margin-left: 95px;
+    margin-right: 55px;
+    }
+    .clocks{
+    width: 100%;
+    }
+    .operation-buttons{
+    width: 100%;
+    height: 70px;
+    }
+    .numpad-buttons {
+    width: 100%;
+    }
+    .percent-remaining-title {
+    margin-left: 120px;
+    margin-top: 15px;
+    }
+    .percent-display{
+    font-size: 200%;
+    margin-left: 215px;;
+    }  
+    .circle-clock-background {
+    margin-left: 75px;
+    }
+    .start-button{
+    margin-left: 165px;
+    }
+    .button1{
+        margin-left: 140px;
+    }
+
+    .button4{
+        margin-left: 140px;
+    }
+
+    .button7{
+        margin-left: 140px;
+    }
+
+    .button0 {
+    margin-left: 220px;
+    }
+}
+
+/* Small phones: from 440 to 480px */
+@media only screen and (max-width: 480px){
+    body{
+    font-size: 14px;
+    }
+    .break-time-title {
+    margin-left: 80px; 
+    }
+    .break-time-clock {
+    margin-left: 95px;
+    margin-right: 55px;
+    }
+    .percent-remaining-title {
+    margin-left: 120px;
+    margin-top: 15px;
+    }
+    .percent-display{
+    margin-left: 210px;;
+    }  
+    .circle-clock-background {
+    margin-left: 65px;
+    }
+    .start-button{
+    margin-left: 155px;
+    }
+    .button1{
+        margin-left: 130px;
+    }
+
+    .button4{
+        margin-left: 130px;
+    }
+
+    .button7{
+        margin-left: 130px;
+    }
+
+    .button0 {
+    margin-left: 210px;
+    }
+}
+
+/* Very small phones: from 400 to 440px */
+@media only screen and (max-width: 440px){
+    body{
+    font-size: 14px;
+    }
+    .break-time-title {
+    margin-left: 60px; 
+    }
+    .break-time-clock {
+    margin-left: 75px;
+    margin-right: 55px;
+    }
+    .percent-remaining-title {
+    margin-left: 100px;
+    margin-top: 15px;
+    }
+    .percent-display{
+    margin-left: 190px;;
+    }  
+    .circle-clock-background {
+    margin-left: 45px;
+    }
+    .start-button{
+    margin-left: 135px;
+    }
+    .button1{
+        margin-left: 110px;
+    }
+
+    .button4{
+        margin-left: 110px;
+    }
+
+    .button7{
+        margin-left: 110px;
+    }
+
+    .button0 {
+    margin-left: 190px;
+    }
+}
+
+/* Very small phones: from 0 to 400px */
+@media only screen and (max-width: 400px){
+    body{
+    font-size: 14px;
+    }
+    .break-time-title {
+    margin-left: 40px; 
+    }
+    .break-time-clock {
+    margin-left: 55px;
+    margin-right: 55px;
+    }
+    .percent-remaining-title {
+    margin-left: 80px;
+    margin-top: 15px;
+    }
+    .percent-display{
+    margin-left: 170px;;
+    }  
+    .circle-clock-background {
+    margin-left: 25px;
+    }
+    .start-button{
+    margin-left: 115px;
+    }
+    .button1{
+        margin-left: 90px;
+    }
+
+    .button4{
+        margin-left: 90px;
+    }
+
+    .button7{
+        margin-left: 90px;
+    }
+
+    .button0 {
+    margin-left: 170px;
+    }
+}
