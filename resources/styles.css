@@ -8,10 +8,18 @@
     box-sizing: border-box;
 }
 
-html,
+html {
+background: url(img/digital.jpg) no-repeat center center fixed;
+-webkit-background-size: cover;
+-moz-background-size: cover;
+-o-background-size: cover;
+background-size: cover;
+}
+
+
+
 body{
-    background-color: rgb(34, 34, 34);
-    color: rgba(188, 198, 204, 1.0);
+    color: rgb(183, 195, 203);
     font-family: 'Lato', 'Arial', sans-serif;
     font-weight: 300;
     font-size: 20px;
